@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            float: left;
+            margin-left: 60px;
+        }
+
+        .nav li {
+            float: left;
+            list-style: none;
+            padding: 20px;
+        }
+
+        .nav li a {
+            display: block;
+            /* a的宽度没有指定的话hover的下划线就会和字体一样宽了 */
+            height: 200px;
+            text-decoration: none;
+            font-size: 18px;
+            color: blue;
+
+        }
+
+        .nav li a:hover {
+            border-bottom: blue solid;
+
+        }
+
+        .haha {
+            width: 300px;
+            height: 100px;
+            background-color: pink;
+            float: left;
+        }
+
+        input {
+            display: block;
+            width: 100px;
+            height: 80px;
+            background-color: skyblue;
+            margin: 0;
+            float: left;
+        }
+
+        button {
+            width: 20px;
+            height: 80px;
+            background-color: green;
+            float: left;
+        }
+        .user {
+            float: right;
+    line-height: 42px;
+    margin-right: 50px;
+    font-size: 14px;
+    color: #666;
+    background-image: url(images/下载.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">课程</a></li>
+        <li><a href="#">职业规划</a></li>
+    </ul>
+    <div class="haha">
+        <input type="text" value="请输入关键词">
+        <button></button>
+    </div>
+     <div class="user">
+         qqleeldsaef
+         
+     </div>
+</body>
+
+</html>
