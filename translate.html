@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    定位三种方式：transform、position、margin、padding
+    <!-- <!-- transform不会改变其他盒子的位置，
+    <!-- 1.translate  translate（x,y） translatex() translatey () --
+        百分比就是自身大小的百分比，对行内元素无效> -->
+    <!-- 2.rotate (45deg) 搭配 transition: all 0.3s--
+        transform-origin可以改变旋转中心，加方位名词、像素> -->
+    <!-- 3.transoform：scale (x,y)  xy是倍数 translate：（2）也可以，不会影响其他盒子，而且可以自己设置中心点 -->
+    <!-- 4.同时转换的顺序：transform：translate rotate scale  先旋转会改变坐标轴方向!!!!! -->
+    <div class="b">
+  <div class="a"></div>
+    </div>
+    <div class="c">
+        <div class="sanjiao">
+
+        </div>
+   
+    </div>
+    <div class="tt">
+
+    </div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
+    <style>
+        ul li {
+            float: left;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid pink;
+            list-style: none;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 9px;
+            transition: all .5s;
+        }
+
+        ul li:hover {
+            transform: scale(1.2);
+        }
+        .tt {
+            width: 200px;
+            height: 200px;
+            background-color: #fff;
+            border: 1px solid gray;
+            margin: 500px auto;
+            overflow: hidden;
+
+        }
+        .tt::before {
+            display: inline-block;
+            content: '猪猪';
+            width: 200px;
+            height: 200px;
+            background-color: hotpink;
+            transition: all .3s;
+            transform: rotate(180deg);
+            transform-origin: left bottom;
+
+        }
+        .tt:hover::before {
+            transform: rotate(0deg);
+            /* 这边注意复原是0deg不是180 */
+         
+        }
+
+        .a {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .b {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+        }
+        .c {
+            position: relative;
+            width: 200px;
+            height: 20px;
+            border: 1px solid black;
+            margin-top: 20px;
+        }
+        .c::after {
+            content: '';
+            /* 没加content就出不来的。。。。。。。。。。 */
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            right: 10px;
+            top: 5px;
+            transform:rotate(45deg);
+            transform-origin: left bottom;
+
+        }
+        .c:hover::after {
+            /* 先hover后after……。。。。。。 */
+            transform: rotate(225deg);
+            transition:all 0.3s
+           
+        }
+    </style>
+
+
+
+
+</body>
+</html>

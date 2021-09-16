@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <!-- 1.定义动画 @keyframe 2.调用动画 animation-name：  animation-duration持续时间简写时
+        在何时开始前面   0% 100% 等价于from to-，简写顺序有提示的
+        百分比其实是时间的百分比！！！！-> -->
+    <!-- animation-timing--function速度曲线，默认ease  
+        animation-delay 何时开始，默认1s
+        animation-iteration-count 播放多少次 infinite无限的，默认一次
+        animation-deriection 是否反方向 ：默认normal ，可以有alternate逆向
+        animation-fill-mode：动画完成后状态  保持前进forwards，回到起始backward
+        animation-play-state：running  paused，搭配hover使用，不能写到简写里去  
+        -->
+    <div class="donghua"></div>
+<style>
+    .donghua {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        animation-name: move;
+        animation-duration: 10s;
+    }
+    @keyframes move  {
+        0% {
+            transfrom:translateX(0)
+        }
+
+        20% {
+            transform: translate(1000px,0);
+
+        }
+
+        50% {
+            transform: translate(1000px,1900px);
+        }
+        70% {
+            transform: translate(0，1900px);
+          
+        }
+        100% {
+            transform:translatex(0)
+        }
+    }
+</style>
+</body>
+</html>

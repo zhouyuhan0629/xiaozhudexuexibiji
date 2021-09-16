@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            margin:100px auto;
+            width: 100%;
+          
+            
+        }
+        div {
+           width: 50%;
+           height: 400px;
+           /* 这边要给高度的。。。。没高度显示不出来 */
+           max-width: 580px;
+           min-width: 100px;
+            float: left;
+
+        }
+        section div:nth-child(1) {
+            background-color: pink;
+        }
+        section div:nth-child(2) {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+</html>

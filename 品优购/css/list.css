@@ -1,0 +1,36 @@
+.sk img {
+    border-left: 1px solid #5e0a07;
+    position: absolute;
+    left: 190px;
+    top: 40px;
+    padding: 20px;
+}
+.sk_list ul li {
+    float: left;
+    font-weight: 600;
+    padding: 0 20px;
+    line-height: 50px;
+    font-size: 22px;
+
+}
+
+.sk_con {
+    float: right;
+}
+.sk_con ul li {
+   
+    font-weight: 400;
+    padding: 0 10px;
+    line-height: 55px;
+    font-size: 14px;
+
+}
+.sk_con ul li:first-child {
+    padding-left: 50px;
+}
+.sk_con ul li:last-child::after {
+    content: '\eabd';
+    font-family: 'icomoon';
+}
+/* 是li的lastchild！！！！！写成a就错了 */
+/* 本应该在左边的出现在右边，说明上一行的行高大于宽度并且有浮动 围绕文字，加overflowhidden */

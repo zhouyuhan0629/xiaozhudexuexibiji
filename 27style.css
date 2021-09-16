@@ -1,0 +1,138 @@
+body {
+    height: 1500px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+/* 不写的话h等标签会有莫名其妙的排版 */
+/* ctrl+g查找行数 */
+
+.banner {
+    height: 421px;
+    background-color: rgb(27, 3, 107);
+    margin: 200px 0;
+    margin-bottom: 0;
+}
+.banner .banxin {
+
+    height: 421px;
+ 
+    width: 900px;
+    margin: 0 auto;
+    
+  background: url("images/banner2_20190819_210028.png") center;
+}
+.banner .banxin .subnav {
+    width: 190px;
+    height: 421px;
+    background-color: rgba(0, 0, 0, .3);
+    float: left;
+}
+.subnav ul li a {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    padding: 0 2px; 
+    /* 此处也可以给lipadding */
+}
+.subnav ul li {
+    line-height: 45px;
+    height: 45px;
+    list-style: none;
+}
+.subnav ul li span {
+    
+    float: right;
+    margin-right: 16px;
+}
+.course {
+    width: 230px;
+    height: 300px;
+    background-color: #fff;
+    float: right;
+    margin-top: 40px;
+}
+.course h2 {
+        height: 48px;
+        font-size: 28px;
+        line-height: 48px;
+        text-align: center;
+        color: floralwhite;
+        background-color: skyblue;
+        margin-top: 0;
+
+}
+.course .bd {
+    padding: 0 20px;
+}
+ .course .bd li {
+     height: 52px;
+     list-style: none;
+     margin-top: 10px;
+     border-bottom: #ccc solid 0.8px;
+     margin-bottom: 5px;
+     
+     
+
+ }
+ .course .bd li h5 {
+     font-size: 18px;
+ }
+ .course .bd li p {
+     font-size: 13px;
+     color: gray;
+ }
+ .course a {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: skyblue;
+    text-decoration: none;
+    border: 3px skyblue solid;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+ }
+ .box {width: 900px;
+    margin-top: 0;
+    margin: auto;
+
+ }
+ .box-hd {
+     height: 50px;
+     line-height: 50px;
+
+ }
+ .box h3 {
+     float: left;
+
+ }
+ .box .boxhref {
+     float: right;
+ }
+ .box-hb ul {
+     width: 900px;
+ }
+.box-hb li {
+ /* 直接给ul指定大一点的宽度，包含住第五个li的右边距，反正也看不见 */
+    width: 165px;
+    height: 270px;
+    background-color: pink;
+    list-style:none;
+    margin-right: 15px;
+    float: left;
+    margin-top: 15px;
+}
+/* .box-hb li img {
+    width: 100%;
+    这样做让图片不超出li
+} */
+.footer {
+    height: 415px;
+    background-color: pink
+    ;
+    margin: 600px 0 0 0;
+    /* 清除ul浮动 */
+}

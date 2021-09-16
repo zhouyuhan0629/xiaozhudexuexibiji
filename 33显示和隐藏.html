@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .haha {
+        width: 100px;
+        height: 200px;
+        background-color:pink;
+        display: none;
+        display: block;
+        
+    }
+    .tudou {
+        position: relative;
+        width: 448px;
+        height: 252px;
+        margin: 30px auto;
+        background-color: pink;
+    }
+   
+    .huise {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .4) url(images/arr.png) no-repeat center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+        
+    }
+
+    .tudou:hover .huise {
+        display: block;
+    }
+    </style>
+    
+</head>
+<body>
+    <!-- diaplay:none 隐藏元素且不在占有原来的位置 display：block 显示元素 -->
+    <!-- visibility:visible/hidden，元素继续占有原来的位置 -->
+    <!-- overflow：visible显示超出的内容（默认）
+        overflow：hidden隐藏多出来的
+        overflow：scroll溢出的部分显示滚动条，不溢出也有滚动条
+        overflow：auto 溢出才显示滚动条-->
+    <div class="haha"></div>
+    <div class="tudou">
+        <img src="images/tudou.jpg">
+        <div class="huise"></div>
+    </div>
+</body>
+</html>

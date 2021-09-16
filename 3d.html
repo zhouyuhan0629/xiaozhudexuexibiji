@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 400px;
+        }
+        img {
+            display: block;
+            transition: all .9s;
+            margin: 100px auto;
+
+        }
+        img:hover {
+           
+            transform: rotateX(360deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- transform:translatex() translatey( ) translatez()
+    等价于 
+    <!-- transform：translate3d（x,y,z，deg) -->
+    <!-- 不能省略 -->
+    <!-- 透视要写在被观察元素的父盒子里，透视越小，盒子越大；z轴越大，物体越大 --> -->
+
+    <!-- 让子元素保持3d效果用transform-style：preserve-3d，默认是flat不
+        开启，有问题就可能是没写这个！！！！！！！！！！！！
+    反转效果：先把后面的一个面反过来180deg -->
+    <!-- 绕x轴转是自己的50
+    %    的轴 -->
+    <img src="media/pig.jpg">
+</body>
+</html>

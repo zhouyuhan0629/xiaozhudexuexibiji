@@ -1,0 +1,199 @@
+.main {
+    width: 980px;
+    height: 455px;
+    
+    margin-left: 219px;
+    margin-top: 10px;
+}
+
+.main .focus {
+    float: left;
+    width: 650px;
+    height: 455px;
+   
+}
+.main .newflash {
+    float: right;
+    width: 320px;
+    height: 455px;
+    /* background-color: skyblue; */
+}
+
+.focus img {
+    width: 100%;
+    height:455px;
+}
+
+.newflash .news {
+    width: 100%;
+    height: 165px;
+    border: 1px solid #e4e4e4;
+    
+}
+.newflash .lifeservice {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+    overflow: hidden;
+    /* 给lifeservice的ul加hidden没用，想想超出的是哪个盒子 */
+
+}
+.newflash .bargin {
+    width: 100%;
+    height: 90px;
+    background-color: red;
+}
+
+.bargin img {
+    width: 100%;
+    height: 85px;
+    margin-top: 5px;
+}
+
+.news_hd {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+border-bottom: 2px dotted #e4e4e4;
+padding: 0 17px;
+
+}
+.news_hd h5 {
+    float: left;
+    font-size: 14px;
+    color: #8b8383;
+    font-weight: 400;
+
+}
+.news_hd .more {
+    float: right;
+    font-size: 14px;
+    color: #8b8383;
+}
+
+.news_hd .more::after {
+    content: '\e91a';
+    font-family: 'icomoon';
+}
+
+.news_bd {
+    padding: 13px 10px 0;
+    line-height: 23px;
+}
+
+
+.news_bd ul li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.lifeservice ul {
+    width: 330px;
+    
+
+}
+.lifeservice ul li {
+    float: left;
+    width: 82px;
+    /* 太大把最后一个盒子挤下去的话就调大ul宽度，overflow hidden，但是不知道 为什么不能用w25%和nthchild选择
+    调宽度 */
+    height: 67px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    /* 此处只要给li加两条边框 */
+    text-align: center;
+    /* 直接让所有子元素居中 */
+}
+.newflash .lifeservice ul li i {
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+   
+    margin-top: 12px;
+    background:url(../images/icons.png) no-repeat -19px -12px;
+}
+
+.recom {
+    height: 168px;
+    margin-top: 12px;
+    background-color: pink;
+}
+
+.recom_hd {
+    width: 210px;
+    height: 100%;
+    float: left;
+    background-color: gray;
+}
+.recom_bd ul li {
+    position: relative;
+    float: left;
+    /* 此处是给li浮动不是img，如果没给li浮动小竖线显示不出来 */
+}
+.recom_bd ul li img {
+    float: left;
+    width: 247.5px;
+    height: 168px
+
+}
+
+.recom_bd ul li:nth-child(-n+3)::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 150px;
+    background-color: #ddd;
+    top: 8px;
+    right: 0;
+}
+
+.jiadian .box_hd {
+    width: 100%;
+    height: 40px;
+    
+    border-bottom: 2px solid gray;
+}
+.jiadian .box_bd {
+    width: 100%;
+    height: 300px;
+   
+}
+
+.box_hd  h3 {
+    float: left;
+    font-size: 18px;
+    color: #c81623;
+    font-weight: 400;
+}
+.tab_list {
+    float: right;
+    line-height: 30px;
+}
+.tab_list ul li {
+    float: left;
+}
+.tab_list ul li a {
+    margin: 0 15px;
+}
+
+.tab_list_item>div {
+    float: left;
+    width: 240px;
+
+}
+.column_210 ul li {
+    text-align: center;
+    float: left;
+    width: 100px;
+    height: 35px;
+    border-bottom: 1px solid gray;
+    padding-left: 5px;
+    margin-right: 5px;
+    line-height: 35px;
+    
+}
+.column_210 img {
+    width: 200px;
+    height: 196px;
+}

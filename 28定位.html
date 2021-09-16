@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    浮动vs定位
+    浮动：横向排列，让块级元素无缝隙的在一行显示
+    定位：让盒子固定在屏幕的某个位置，或者自由的在某个盒子里移动并压住其他盒子
+    定位=定位模式(position:static/relative/fixed/absolute)+边偏移(top/left/right/bottom)
+    静态定位postion： static 用标准流摆放盒子，没有边偏移
+    相对定位：position ： relative 移动的位置是根据自己原来的位置，边偏移以左上为顶点xy轴，想成margin
+             原来的位置依然保留，不脱标
+    绝对定位：拼爹型，当没有父元素或者父元素没有定位，就以浏览器对齐，有的话根据最近一级的父亲，不保留原先的位置
+    （优点，可以不影响底下盒子的布局）
+    固定定位：position：fixed 以浏览器的可视窗口，不保留原先位置
+
+    什么时候用：
+    子用了绝对定位，父亲用相对定位
+    <div></div>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        div {
+            width: 100%;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</body>
+</html>

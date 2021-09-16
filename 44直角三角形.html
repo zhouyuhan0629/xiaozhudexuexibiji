@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .haha {
+
+        width: 0;
+        height: 0;
+        
+        border-color: transparent red transparent transparent;
+        border-style: solid;
+        border-width: 200px 100px 0 0;
+
+        }
+        .miaosha {
+            width: 200px;
+            height: 20px;
+            border: 1px solid red;
+            margin: 100px auto;
+        }
+        .miaosha .price {
+            float: left;
+            width: 120px;
+            background-color: red;
+            color: white;
+            line-height: 20px;
+            text-align: center;
+        }
+        
+        .miaosha .sanjiao {
+            float: right;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color: transparent white transparent transparent;
+            border-width: 20px 10px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="haha"></div>
+    <div class="miaosha">
+        <span class="price"><strong>￥1650</strong>
+            <i class="sanjiao"></i>
+        </span>
+        <span class="yuanjia">￥5650</span>
+    </div>
+</body>
+</html>

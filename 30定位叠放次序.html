@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            position: fixed;
+        }
+        
+        .xiongda {
+            background-color: #f432f4;
+            left: 50px;
+            z-index: 1;
+        }
+        
+        .xionger {
+            height: 200px;
+            background-color: #ff5;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 只有定位的才有index属性，可以是正整数/负整数/0 z-index 
+    如果值相同，后来者居上（默认是z-auto）， 1》(0)auto -->
+    <div class="box xiongda"></div>
+    <div class="box xionger"></div>
+
+</body>
+
+</html>
