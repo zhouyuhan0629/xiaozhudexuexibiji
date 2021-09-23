@@ -6,23 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div {
+        div.aa {
             width: 100px;
             height: 500px;
             background-color: pink;
             margin: 100px auto;
-            /* white-space: nowrap; *这条是单行显示/
+            white-space: nowrap; 
             overflow: hidden;
             text-overflow: ellipsis;
-            display: -webkit-box;
-            /* 限制在一个块元素显示的文本的行数 */
-            -webkit-line-clamp: 2;
-            /* 设置或检索伸缩盒对象的子元素的排列方式 */
-            -webkit-box-orient: vertical
+                /* display: -webkit-box;
+                限制在一个块元素显示的文本的行数
+                -webkit-line-clamp: 2;
+                设置或检索伸缩盒对象的子元素的排列方式
+                -webkit-box-orient: vertical */
+        }
+        div.bb {
+        
+            width: 300px;
+            background-color: rgb(54, 181, 231);
+            height: 100px;
+            white-space: normal;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     </style>
 </head>
 <body>
-    <div>范德萨发京东数据放到少奋斗几十年附近的法大师傅大师傅</div>
+    <div class="aa">范德萨发京东数据放到少奋斗几十年附近的法大师傅大师傅</div>
+    <div class="bb">kljfasdfhuhakujsakjfbckjfdsfdsfdsvdsvssahukdigas</div>
 </body>
 </html>

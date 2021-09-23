@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* rem是把屏幕划分，栅格系统是把container划分 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container ul li {
+            width: 93.5px;
+            height: 35px;
+            background-color: green;
+            float: left;
+        }
+
+        .container {
+            height: 25px;
+        }
+        @media screen and (max-width:768px) {
+            .container {
+                width: 100%;
+            }
+            .container ul li {
+                width: 33.3%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+        </ul>
+    </div>
+</body>
+</html>
