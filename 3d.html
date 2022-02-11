@@ -7,6 +7,7 @@
     <title>Document</title>
     <style>
         body {
+            transform-style:preserve-3d;
             perspective: 400px;
         }
         img {
@@ -26,7 +27,7 @@
     等价于 
      transform：translate3d（x,y,z，deg) -->
     <!-- 不能省略 -->
-    <!-- 透视要写在被观察元素的父盒子里，透视越小，盒子越大；z轴越大，物体越大 --> -->
+    <!-- 透视perspective要写在被观察元素的父盒子里，透视越小，盒子越大；z轴越大，物体越大 --> -->
 
     <!-- 让子元素保持3d效果用transform-style：preserve-3d，默认是flat不
         开启，有问题就可能是没写这个！！！！！！！！！！！！

@@ -1,0 +1,89 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-02-11 15:50:01
+ * @LastEditTime: 2022-02-11 15:59:35
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \xiaozhudexuexibiji\手风琴.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button.accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 30px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        button.accordion.active,
+        button.accordion:hover {
+            background-color: #ddd;
+        }
+
+        div.panel {
+            padding: 0 18px;
+            height: 30px;
+            background-color: white;
+            /* display: none; */
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        button.accordion:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: left;
+            margin-left: 5px;
+        }
+
+        button.accordion.active:after {
+            content: "\2212";
+        }
+    </style>
+</head>
+
+<body>
+    <h2>手风琴动画</h2>
+    <p>点击以下选项显示折叠内容</p>
+
+    <button class="accordion"></button>
+    <div class="panel">
+        <p>Content information 1</p>
+    </div>
+
+    <button class="accordion"></button>
+    <div class="panel">
+        <p>Content information 2</p>
+    </div>
+
+    <button class="accordion"></button>
+    <div class="panel">
+        <p>Content information 3</p>
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0, len = acc.length; i < len; i++) {
+            acc[i].onclick = function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                panel.style.display = (panel.style.display == "none" ? "" : "none");
+            }
+        }
+    </script>
+</body>
+
+</html>

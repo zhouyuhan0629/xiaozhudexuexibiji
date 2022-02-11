@@ -1,0 +1,96 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-02-11 15:25:22
+ * @LastEditTime: 2022-02-11 15:28:03
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \xiaozhudexuexibiji\放大镜.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        #demo {
+            display: block;
+            width: 323px;
+            height: 430px;
+            margin: 5px;
+            position: relative;
+            border: 1px solid #ccc;
+        }
+
+        #small-box {
+            position: relative;
+            z-index: 1;
+        }
+
+        #float-box {
+            display: none;
+            width: 160px;
+            height: 120px;
+            position: absolute;
+            /*使元素脱离文档流,方便自由操控元素*/
+            background: #ffffcc;
+            border: 1px solid #ccc;
+            filter: alpha(opacity=50);
+            opacity: 0.5;
+        }
+
+        #mark {
+            position: absolute;
+            display: block;
+            width: 323px;
+            height: 430px;
+            background-color: #fff;
+            filter: alpha(opacity=0);
+            /*过滤器，目前只有少数浏览器支持*/
+            opacity: 0;
+            z-index: 10;
+            /*确保markBox位于floatBox和图片之上，防止markBox被覆盖，导致对markBox的鼠标移动事件不起作用*/
+        }
+
+        #big-box {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 330px;
+            width: 400px;
+            height: 300px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            z-index: 1;
+        }
+
+        #big-box img {
+            position: absolute;
+            z-index: 5
+        }
+    </style>
+</head>
+
+<body>
+    <div id="demo">
+        <div id="small-box">
+            <div id="mark"></div>
+            <div id="float-box"></div>
+            <img
+                src="https://img.alicdn.com/imgextra/https://img.alicdn.com/bao/uploaded/i2/1026430696/O1CN011H0o7UD6ZwLT3vl_!!1026430696.jpg_430x430q90.jpg" />
+        </div>
+        <div id="big-box">
+            <img
+                src="https://img.alicdn.com/imgextra/https://img.alicdn.com/bao/uploaded/i2/1026430696/O1CN011H0o7UD6ZwLT3vl_!!1026430696.jpg" />
+        </div>
+    </div>
+</body>
+
+</html>

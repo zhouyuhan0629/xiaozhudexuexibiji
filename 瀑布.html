@@ -1,0 +1,63 @@
+<!-- 
+ * @Author: your name
+ * @Date: 2022-01-06 18:23:37
+ * @LastEditTime: 2022-01-07 17:44:30
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \xiaozhudexuexibiji\瀑布.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+    <style>
+        .main{
+            position: relative;
+            margin: 0 auto;
+            /* text-align: center; */
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="main"></div>
+    
+
+    <script>
+        
+        $(document).ready(function(){
+            console.log(1);
+        })  //测试jquery是否引入成功
+        var minH=0;
+        var hArr=[];
+        var $boxs=$('.main>div');
+        var ws=$boxs.eq[0].outerWidth();
+        var cols=Math.floor(($(window).width()-30)/ws);
+        $('.main').width(w.cols).css('margin','0 auto');
+
+        $.each($boxs,function(index,value){
+            var h = $boxs.eq(index).outerHeight()
+            if(index<cols){
+                hArr[index]=h
+            }
+            else{
+                var minH=Math.min.apply(null,hArr)
+                var minHindex=$.inArray(minH,hArr)
+                hArr[minHindex]+=$boxs.eq(index).outerHeight()
+            }
+            $boxs.eq(index).css(
+                {'position':'absolute',
+                'top':minH+'px',
+                'left':w*minHindex+'px'}
+            )
+            
+        })
+        
+    </script>
+</body>
+</html>
+

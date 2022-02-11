@@ -1,0 +1,51 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-02-11 17:26:32
+ * @LastEditTime: 2022-02-11 17:50:45
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE!
+ * @FilePath: \xiaozhudexuexibiji\contenteditable.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div[contenteditable]{
+            width: 100%;
+            background-color: pink;
+            outline: none;
+            padding: 10px 0 0 10px;
+            margin-bottom: 100px;
+        }
+        div[contenteditable]:empty::before{
+            content: attr(placeholder);
+            color: gray;
+        }
+        div[contenteditable]:focus {
+            content: none;
+        }
+        textarea {
+            width: 100%;
+            
+        }
+        .box {
+            width: 30%;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div contenteditable="true" placeholder="请输入">
+        </div>
+        <textarea >
+        </textarea>
+    </div>
+   
+      
+</body>
+</html>
